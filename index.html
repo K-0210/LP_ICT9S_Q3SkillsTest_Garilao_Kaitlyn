@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3 Skills Test</title>
+
+     <style>
+
+        #Age {
+            width: 150px;
+            margin-right: 70px;
+        }
+
+        #Bday{
+            width: 259px;
+        }
+
+        #Lname{
+            width: 250px;
+        }
+
+        #Fname{
+            width: 250px;
+            margin-right: 50px;
+        }
+
+        #Pass{
+            width: 250px;
+            margin-right: 25px;
+        }
+
+        #CPass{
+            width: 250px;
+        }
+
+        #Email{
+            width: 250px;
+            margin-right: 25px;
+        }
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background: #1b2737;
+            justify-content:center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+        }
+
+        form{
+            background: #d9d9d9;
+            padding: 30px 25px;
+            border-radius: 10px;
+            width: 800px;
+            height: 1000px;
+        }
+
+        .form-control{
+            width: 100%;
+            padding: 9px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 2px solid #9fbece;
+            box-sizing: border-box;
+            margin-top: 3px;
+        }
+
+        button{
+            width: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #7dacdf;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+
+
+        #result{
+            margin-top: 40px; 
+            font-weight: bold;
+            text-align: center;
+            color: black;
+        }
+        
+        label{
+            font-weight: bolder;
+        }
+
+        #PN{
+            width: 250px;
+        }
+
+        #LFN{
+            margin-right: 211px;
+        }
+
+        #LA{
+            margin-right: 250px;
+            margin-left: 25px;
+        }
+
+        #LB{
+            margin-right: 54px;
+        }
+
+        #LE{
+            margin-right: 202px;
+        }
+
+        #LP{
+            margin-right: 180px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<form align="center">
+
+    <h2 align="center">Sign-Up Form!</h2>
+    
+    <br>
+
+    <label id="LFN"> First Name: </label>
+    <label id="LLN"> Last Name: </label>
+    <br>
+    <input type="string" id="Fname" class="form-control">
+    <input type="string" id="Lname" class="form-control"> 
+
+    <br>
+
+    <label id="LA"> Age: </label>
+    <label id="LB"> Birthday: </label>
+    <br>
+    <input type="string" id="Age" class="form-control"> 
+    <input type="string" id="Bday" class="form-control"> 
+
+    <br>
+
+    <label id="LE"> Email: </label>
+    <label id="LPN"> Phone Number: </label>
+    <br>
+    <input type="string" id="Email" class="form-control"> 
+    <input type="string" id="PN" class="form-control"> 
+
+    <br>
+
+    <label id="LP"> Password: </label>
+    <label id="LCP"> Confirm Password: </label>
+    <br>
+    <input type="string" id="Pass" class="form-control"> 
+    <input type="string" id="CPass" class="form-control"> 
+
+    <br>
+
+    <button type="button" class="btn btn-success" onclick="submitForm()"> Submit </button>
+
+</form>
+
+<script>
+
+    function submitForm () {
+        let Fname = document.getElementById ("Fname").value;
+        let Lname = document.getElementById("Lname").value;
+        let Age = document.getElementById("Age").value;
+        let Email = document.getElementById("Email").value;
+        let Pass = document.getElementById("Pass").value;
+        let CPass = document.getElementById("CPass").value;
+        let Bday = document.getElementById("Bday").value;
+        let PN = document.getElementById("PN").value;
+
+
+        if (Fname === "" || Lname === "" || Email === "" || Age === "" || Bday === "" || Pass === "" || PN === "" || CPass === "") {
+            window.alert("Please, fill out all the fields!");
+        }
+
+        else {
+            window.alert("Form submitted successfully!");
+        }
+
+}
+
+</script>
+    
+</body>
+</html>
